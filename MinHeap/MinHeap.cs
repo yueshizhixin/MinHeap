@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Text;
 
 namespace MinHeap
@@ -10,12 +11,12 @@ namespace MinHeap
         public int Count { get; set; }
         public T[] Heap { get; set; }
         private readonly int defaultSize = 10;
-        AnonymousComparer<T> Comparer;
+        private Comparer<T> Comparer;
 
         public MinHeap(Comparison<T> comparison)
         {
             Heap = new T[defaultSize];
-            Comparer = new AnonymousComparer<T>(comparison);
+            Comparer = Comparer<T>.Create(comparison);
             Count = 0;
 
         }

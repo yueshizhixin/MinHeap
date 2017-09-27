@@ -1,8 +1,0 @@
-C:\Users\rased\projects\MinHeap\MinHeap\bin\Debug\netstandard1.4\MinHeap.deps.json
-C:\Users\rased\projects\MinHeap\MinHeap\bin\Debug\netstandard1.4\MinHeap.dll
-C:\Users\rased\projects\MinHeap\MinHeap\bin\Debug\netstandard1.4\MinHeap.pdb
-C:\Users\rased\projects\MinHeap\MinHeap\obj\Debug\netstandard1.4\MinHeap.csprojResolveAssemblyReference.cache
-C:\Users\rased\projects\MinHeap\MinHeap\obj\Debug\netstandard1.4\MinHeap.csproj.CoreCompileInputs.cache
-C:\Users\rased\projects\MinHeap\MinHeap\obj\Debug\netstandard1.4\MinHeap.AssemblyInfo.cs
-C:\Users\rased\projects\MinHeap\MinHeap\obj\Debug\netstandard1.4\MinHeap.dll
-C:\Users\rased\projects\MinHeap\MinHeap\obj\Debug\netstandard1.4\MinHeap.pdb
