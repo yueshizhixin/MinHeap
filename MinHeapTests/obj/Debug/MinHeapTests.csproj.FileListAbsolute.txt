@@ -1,0 +1,15 @@
+C:\Users\rased\projects\MinHeap\MinHeapTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\rased\projects\MinHeap\MinHeapTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\rased\projects\MinHeap\MinHeapTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\rased\projects\MinHeap\MinHeapTests\bin\Debug\MinHeapTests.dll
+C:\Users\rased\projects\MinHeap\MinHeapTests\bin\Debug\MinHeapTests.pdb
+C:\Users\rased\projects\MinHeap\MinHeapTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\rased\projects\MinHeap\MinHeapTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\rased\projects\MinHeap\MinHeapTests\bin\Debug\MinHeap.dll
+C:\Users\rased\projects\MinHeap\MinHeapTests\bin\Debug\MinHeap.pdb
+C:\Users\rased\projects\MinHeap\MinHeapTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\rased\projects\MinHeap\MinHeapTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\rased\projects\MinHeap\MinHeapTests\obj\Debug\MinHeapTests.csprojResolveAssemblyReference.cache
+C:\Users\rased\projects\MinHeap\MinHeapTests\obj\Debug\MinHeapTests.csproj.CoreCompileInputs.cache
+C:\Users\rased\projects\MinHeap\MinHeapTests\obj\Debug\MinHeapTests.dll
+C:\Users\rased\projects\MinHeap\MinHeapTests\obj\Debug\MinHeapTests.pdb
