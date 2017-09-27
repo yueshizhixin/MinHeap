@@ -1,33 +1,15 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Text;
 
 namespace MinHeap
 {
-    public class AnonymousComparer<T> : IComparer<T>
-    {
-        private Comparison<T> comparison;
-
-        public AnonymousComparer(Comparison<T> comparison)
-        {
-            if (comparison == null)
-                throw new ArgumentNullException("comparison");
-            this.comparison = comparison;
-        }
-
-        public int Compare(T x, T y)
-        {
-            return comparison(x, y);
-        }
-    }
 
     public class MinHeap<T> 
     {
         public int Count { get; set; }
         public T[] Heap { get; set; }
-        private readonly int defaultSize = 100;
-        //private Comparer<T> Comparer;
+        private readonly int defaultSize = 10;
         AnonymousComparer<T> Comparer;
 
         public MinHeap(Comparison<T> comparison)
@@ -54,17 +36,15 @@ namespace MinHeap
             if (Count + 1 > Heap.Length - 1)
                 Resize();
 
-            // Insert to end of array
-            Count++;
             Heap[Count] = item;
-            int index = Count;
+            Count++;
+            int parentIndex = 0;
             
-
-            while (index > 0)
+            for (int index = Count; index > 1; index = parentIndex)
             {
-                int parentIndex = index / 2;
+                parentIndex = index / 2;
                 T parent = Heap[parentIndex];
-                
+
                 if (Comparer.Compare(item, parent) < 0)
                 {
                     // Swap
@@ -76,9 +56,7 @@ namespace MinHeap
                 {
                     break;
                 }
-
-            }
-            
+            } 
         }
 
         public int Dequeue(T item)
@@ -86,9 +64,9 @@ namespace MinHeap
             throw new NotImplementedException();
         }
 
-        public int Peek()
+        public T Peek()
         {
-            throw new NotImplementedException();
+            return Heap[0];
         }
 
         public T[] ToArray()

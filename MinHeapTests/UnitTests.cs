@@ -8,22 +8,29 @@ namespace MinHeapTests
 {
 
     [TestClass]
-    public class UnitTest1
+    public class UnitTests
     {
-            
 
         [TestMethod]
         public void Enqueue()
         {
-            // Arrange
+
             MinHeap<int> heap = new MinHeap<int>((x, y) => x.CompareTo(y));
-            // Act
-            heap.Enqueue(1);
+            heap.Enqueue(-1);
             heap.Enqueue(10);
 
-
-            // Assert
             Assert.IsTrue(heap.Heap[0] < heap.Heap[1]);
+        }
+
+        [TestMethod]
+        public void Peek()
+        {
+            MinHeap<int> heap = new MinHeap<int>((x, y) => x.CompareTo(y));
+            heap.Enqueue(-1);
+            heap.Enqueue(10);
+            int min = heap.Peek();
+
+            Assert.AreEqual(min, -1);
         }
     }
 }
