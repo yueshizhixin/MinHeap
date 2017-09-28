@@ -6,84 +6,42 @@ using System.Text;
 namespace MinHeap
 {
 
-    public class MinHeap<T> 
+    public class MinHeap<T> where T : IComparable
     {
-        public int Count { get; set; }
-        public T[] Heap { get; set; }
-        private readonly int defaultSize = 10;
-        private Comparer<T> Comparer;
+        public List<T> _data;
 
-        public MinHeap(Comparison<T> comparison)
+        public MinHeap()
         {
-            Heap = new T[defaultSize];
-            Comparer = Comparer<T>.Create(comparison);
-            Count = 0;
-
-        }
-
-        public int Clear()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Contains(T item)
-        {
-            throw new NotImplementedException();
+            _data = new List<T>();
         }
 
         public void Enqueue(T item)
         {
+            _data.Add(item);
 
-            if (Count + 1 > Heap.Length - 1)
-                Resize();
-
-            Heap[Count] = item;
-            Count++;
-            int parentIndex = 0;
-            
-            for (int index = Count; index > 1; index = parentIndex)
+            int child = _data.Count - 1;                        // child index; start at end
+            while (child > 0)
             {
-                parentIndex = index / 2;
-                T parent = Heap[parentIndex];
+                int parent = (child - 1) / 2;                       // parent index
 
-                if (Comparer.Compare(item, parent) < 0)
-                {
-                    // Swap
-                    Heap[parentIndex] = item;
-                    Heap[index] = parent;
-                    index = parentIndex;
-                }
-                else
-                {
-                    break;
-                }
-            } 
+                if (_data[child].CompareTo(_data[parent]) >= 0) 
+                    break;                                         // child item is larger than (or equal) parent so we're done
+
+                Swap(ref _data, ref child, ref parent);
+                //T temp = _data[child];
+                //_data[child] = _data[parent];
+                //_data[parent] = temp;
+                //child = parent;
+            }
         }
 
-        public int Dequeue(T item)
-        {
-            throw new NotImplementedException();
-        }
 
-        public T Peek()
+        private void Swap(ref List<T> data, ref int child, ref int parent)
         {
-            return Heap[0];
-        }
-
-        public T[] ToArray()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override String ToString()
-        {
-            throw new NotImplementedException();
-        }
-
-        private bool Resize()
-        {
-
-            return true;
+            T temp = data[child];
+            data[child] = data[parent];
+            data[parent] = temp;
+            child = parent;
         }
 
 

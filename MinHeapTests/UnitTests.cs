@@ -11,26 +11,20 @@ namespace MinHeapTests
     public class UnitTests
     {
 
+        // TODO: Refactor onece heap.data is changed to private. 
         [TestMethod]
         public void Enqueue()
         {
+            MinHeap<int> heap = new MinHeap<int>();
 
-            MinHeap<int> heap = new MinHeap<int>((x, y) => x.CompareTo(y));
-            heap.Enqueue(-1);
             heap.Enqueue(10);
+            heap.Enqueue(5);
+            heap.Enqueue(-10);
 
-            Assert.IsTrue(heap.Heap[0] < heap.Heap[1]);
+
+            Assert.AreEqual(heap._data[0], -10);
         }
 
-        [TestMethod]
-        public void Peek()
-        {
-            MinHeap<int> heap = new MinHeap<int>((x, y) => x.CompareTo(y));
-            heap.Enqueue(-1);
-            heap.Enqueue(10);
-            int min = heap.Peek();
-
-            Assert.AreEqual(min, -1);
-        }
+       
     }
 }
